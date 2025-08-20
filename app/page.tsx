@@ -317,10 +317,10 @@ export default function AnkoStudiosLanding() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Get in Touch</h2>
           <p className="text-gray-400 mb-8">
-            Ready to create something amazing? Fill out the form below and we'll be in touch.
+            Ready to create something amazing? Fill out the form below and we&apos;ll be in touch.
           </p>
 
-          {/* NOTE: Replace the email with client's address */}
+          {/* NOTE: Replace the email with client&apos;s address */}
           <form
             action="https://formsubmit.co/sasanklakshman1554@gmail.com"
             method="POST"
