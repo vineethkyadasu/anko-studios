@@ -261,7 +261,7 @@ export default function AnkoStudiosLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold">Our Latest Work</h2>
-            <p className="text-gray-400 mt-2">A glimpse into the moments we've captured.</p>
+            <p className="text-gray-400 mt-2">A glimpse into the moments We&apos;ve captured.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {gallery.map((src, i) => (
