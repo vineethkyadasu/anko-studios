@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Testimonials from "./components/Testimonials";
 import { Camera, Film, Clapperboard, Drone, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 
 export default function AnkoStudiosLanding() {
@@ -12,6 +13,7 @@ export default function AnkoStudiosLanding() {
     { href: "#why-choose-us", label: "Why Us" },
     { href: "#services", label: "Services" },
     { href: "#gallery", label: "Gallery" },
+    { href: "/clients", label: "Clients" },
     { href: "#testimonials", label: "Testimonials" },
     { href: "#contact", label: "Contact" },
   ];
@@ -63,22 +65,78 @@ export default function AnkoStudiosLanding() {
   ];
 
   const testimonials = [
-    {
-      quote:
-        "ANKO Studios captured our family's most precious moments with a touch of magic. The photos are a beautiful blend of traditional and modern artistry.",
-      author: "Jane Doe",
-    },
-    {
-      quote:
-        "The team was professional, creative, and made us feel so comfortable. The maternity shoot was an incredible experience—photos are breathtaking.",
-      author: "John Smith",
-    },
-    {
-      quote:
-        "We are so happy with our wedding album! Every picture tells a story. Highly recommend their videography too!",
-      author: "Emily Rose",
-    },
-  ];
+  {
+    quote:
+      "Studios in London, and I couldn’t be more impressed with their work. From start to finish, the team was professional, creative, and incredibly easy to work with. Every shot was sharp, well-composed, and full of life. Highly recommend ANKO Studios — a top-tier experience from a talented team!",
+    author: "Ganesh Kuppala",
+  },
+  {
+    quote:
+      "Absolutely wonderful experience with Anko Studios London for my daughter's event! They were incredibly professional, easy to work with, and captured every moment beautifully. Very reliable and patient when dealing with customers.",
+    author: "Chandra Cs",
+  },
+  {
+    quote:
+      "We’ve been using Anko Studios for photos and videos at all our events, and they never disappoint! They captured our Ganesh Festival perfectly — every moment was amazing. Highly recommend Anko Studios — super talented and great to work with!",
+    author: "Janu Angel",
+  },
+  {
+    quote:
+      "Had a really good experience with Anko Studios. Anand is very professional and friendly. The photos came out beautifully with great detail and creativity. Highly recommend for housewarming, baby photoshoots, or any special event.",
+    author: "Sri",
+  },
+  {
+    quote:
+      "Had a wonderful experience with Anko Studios! Anand Korva is truly fantastic — professional, friendly, talented, and patient, especially with kids. I’m extremely happy and strongly recommend Anko Studios for all kinds of events and family shoots!",
+    author: "Divya Garigaboina",
+  },
+  {
+    quote:
+      "This year’s Ganesh Festival was captured beautifully thanks to Anand Anna. Every detail and candid expression was documented with passion and creativity. Truly grateful for his dedication — the video editing was mind-blowing!",
+    author: "Srikanth Mudhiraj",
+  },
+  {
+    quote:
+      "This studio offers creative ideas and delivers professional photos at a very reasonable price. The photographer is patient, friendly, and truly understands Indian-style photography. A wonderful experience overall – highly recommended!",
+    author: "Nagesh B",
+  },
+  {
+    quote:
+      "Anko Studios did such an amazing job capturing my little girl’s 1st birthday. The pictures turned out beautifully, and they were wonderful to work with. Highly recommend if you’re looking for a photographer to capture your best moments.",
+    author: "Raghunath Reddy",
+  },
+  {
+    quote:
+      "We had an amazing experience with Anand. He did a photoshoot for our child, and the results were stunning. His patience and creativity made the entire session enjoyable. Highly recommended for anyone looking for a talented and thoughtful photographer!",
+    author: "Parimala Rao",
+  },
+  {
+    quote:
+      "Great services! I have done my photoshoot from Anand Anna! And it was great! Definitely recommended!",
+    author: "Ramagiri Shruthi Vyshalini",
+  },
+  {
+    quote:
+      "Amazing photography, excellent service in reasonable budget, perfect for all events and private shoots.",
+    author: "Pradeep Katkam",
+  },
+  {
+    quote:
+      "Easy to work with! Great candid captures. Beautifully done photography that feels natural and full of life.",
+    author: "Vidyani Suryadevara",
+  },
+  {
+    quote:
+      "I had an exceptional experience with Anko Studios in London under Anand Korva. Professionalism, creativity, and attention to detail at its best. Anand is talented and humble — truly a wonderful person and photographer. Highly recommended!",
+    author: "Boddupally Raghuvaran",
+  },
+  {
+    quote:
+      "Anko Studios has always been there for me with budget-friendly, high-quality services. Anand is humble, honest, and easy to work with — no ego, no pressure, just passion and perfection. He lets his work speak for itself!",
+    author: "Pavani Kollu",
+  },
+];
+
 
   const gallery = [
     "https://res.cloudinary.com/dhtytlwnz/image/upload/v1755617768/WhatsApp_Image_2025-08-19_at_8.53.53_PM_gcfkc5.jpg",
