@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -19,13 +21,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 bg-[#0d0d0e]/90 backdrop-blur border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3">
-          <img
+        <Link href="/" className="flex items-center gap-3">
+          <Image
             src="https://res.cloudinary.com/dhtytlwnz/image/upload/v1755606514/Anko_Studios_logo_bpid46.png"
             alt="Anko Studios"
-            className="h-9 sm:h-11"
+            width={160}
+            height={50}
+            priority
           />
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
@@ -65,10 +69,11 @@ export default function Header() {
           />
           <div className="absolute right-0 top-0 h-full w-72 bg-[#0f0f10] border-l border-white/10 p-6 space-y-6">
             <div className="flex items-center justify-between">
-              <img
+              <Image
                 src="https://res.cloudinary.com/dhtytlwnz/image/upload/v1755606514/Anko_Studios_logo_bpid46.png"
-                alt="Anko"
-                className="h-8"
+                alt="Anko Studios"
+                width={130}
+                height={40}
               />
               <button
                 className="p-2 border border-white/10 rounded-md"
