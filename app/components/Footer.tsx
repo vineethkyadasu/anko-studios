@@ -16,6 +16,16 @@ export default function Footer() {
         <p className="text-sm text-gray-400">
           © {new Date().getFullYear()} ANKO Studios. All rights reserved.
         </p>
+        <p className="text-sm text-gray-500 mt-2">
+          Designed & Developed by{" "}
+          <a
+            href="https://vikrin.com"
+            target="_blank"
+            className="text-[#d4af37] font-semibold hover:underline"
+          >
+            Vikrin
+          </a>
+        </p>
       </div>
     </footer>
   );
