@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import ShowcaseButton from "./components/ShowcaseButton"; // ✅ Add this import
 
 export const metadata = {
   title: "Anko Studios | Professional Photography & Videography",
@@ -19,7 +20,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" href="/images/hero2.jpg" as="image" />
         <link rel="preload" href="/images/hero3.jpg" as="image" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        {/* ✅ Floating slideshow button */}
+        <ShowcaseButton />
+      </body>
     </html>
   );
 }
