@@ -1,7 +1,14 @@
 "use client";
+
 import React, { useState } from "react";
+import HeroSlideshow from "./components/HeroSlideshow";
 import Testimonials from "./components/Testimonials";
 import { Camera, Film, Clapperboard, Drone, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+
+
+
 
 export default function AnkoStudiosLanding() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -231,51 +238,91 @@ export default function AnkoStudiosLanding() {
         )}
       </header>
 
-      {/* Hero */}
-      <section id="hero" className="relative flex items-center justify-center text-center min-h-[80vh] px-6 overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/40 via-[#0f0f10] to-[#0f0f10]" />
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white">
-            Crafting <span className="text-[#d4af37]">Visual Stories</span>
-          </h1>
-          <p className="mt-4 text-lg sm:text-xl text-gray-300">
-            Professional Photography & Videography Services
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <a href="#contact" className="px-6 py-3 rounded-full bg-[#d4af37] text-black font-semibold hover:opacity-90">
-              Book a Consultation
-            </a>
-            <a href="#gallery" className="px-6 py-3 rounded-full border border-white/10 hover:bg-white/5">
-              View Gallery
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* Hero with Auto-Sliding Background */}
+<section
+  id="hero"
+  className="relative flex items-center justify-center text-center min-h-[80vh] px-6 overflow-hidden"
+>
+  <HeroSlideshow />
+
+  <div className="max-w-5xl mx-auto relative z-10">
+    <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white">
+      Crafting <span className="text-[#d4af37]">Visual Stories</span>
+    </h1>
+    <p className="mt-4 text-lg sm:text-xl text-gray-300">
+      Professional Photography & Videography Services
+    </p>
+    <div className="mt-8 flex items-center justify-center gap-4">
+      <a
+        href="#contact"
+        className="px-6 py-3 rounded-full bg-[#d4af37] text-black font-semibold hover:opacity-90"
+      >
+        Book a Consultation
+      </a>
+      <a
+        href="#gallery"
+        className="px-6 py-3 rounded-full border border-white/10 hover:bg-white/5"
+      >
+        View Gallery
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
       {/* About */}
-      <section id="about-us" className="px-6 py-20 sm:py-28">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div className="order-2 md:order-1">
-            <h2 className="text-3xl sm:text-4xl font-bold">Our Passion, Your Story</h2>
-            <p className="mt-4 text-gray-400">
-              At ANKO Studios, we transform fleeting moments into timeless memories. Our team
-              specializes in capturing your unique story with authenticity and creative vision,
-              from weddings to corporate events.
-            </p>
-            <h3 className="mt-8 text-2xl font-semibold">Our Commitment to You</h3>
-            <p className="mt-3 text-gray-400">
-              We offer a personalized, seamless experience—understanding your vision and ensuring
-              every detail is perfect.
-            </p>
-            <a href="#contact" className="inline-block mt-6 text-[#d4af37] font-semibold">Learn more →</a>
-          </div>
-          <div className="order-1 md:order-2">
-            <video className="w-full h-full rounded-2xl border border-white/10 shadow-xl" autoPlay loop muted playsInline>
-              <source src="https://res.cloudinary.com/dhtytlwnz/video/upload/v1755606559/Anko_logo_end_zyy0eq.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </section>
+<section id="about-us" className="px-6 py-20 sm:py-28">
+  <div className="max-w-7xl mx-auto">
+    {/* Top Row: Text + Video */}
+    <div className="grid md:grid-cols-2 gap-10 items-center">
+      {/* Left: Text */}
+      <div className="order-2 md:order-1">
+        <h2 className="text-3xl sm:text-4xl font-bold">Our Passion, Your Story</h2>
+        <p className="mt-4 text-gray-400">
+          At ANKO Studios, we transform fleeting moments into timeless memories. Our team
+          specializes in capturing your unique story with authenticity and creative vision,
+          from weddings to corporate events.
+        </p>
+        <h3 className="mt-8 text-2xl font-semibold">Our Commitment to You</h3>
+        <p className="mt-3 text-gray-400">
+          We offer a personalized, seamless experience—understanding your vision and ensuring
+          every detail is perfect.
+        </p>
+        <a href="#contact" className="inline-block mt-6 text-[#d4af37] font-semibold">
+          Learn more →
+        </a>
+      </div>
+
+      {/* Right: Video */}
+      <div className="order-1 md:order-2">
+        <video
+          className="w-full h-full rounded-2xl border border-white/10 shadow-xl"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="https://res.cloudinary.com/dhtytlwnz/video/upload/v1755606559/Anko_logo_end_zyy0eq.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+
+    {/* Bottom Row: 4 Portrait Images */}
+    <div className="mt-16 flex flex-wrap justify-center gap-6">
+      <img src="/images/about1.jpg" alt="About 1" className="w-[250px] h-[350px] object-cover rounded-2xl shadow-lg" />
+      <img src="/images/about2.jpg" alt="About 2" className="w-[250px] h-[350px] object-cover rounded-2xl shadow-lg" />
+      <img src="/images/about3.jpg" alt="About 3" className="w-[250px] h-[350px] object-cover rounded-2xl shadow-lg" />
+      <img src="/images/about4.jpg" alt="About 4" className="w-[250px] h-[350px] object-cover rounded-2xl shadow-lg" />
+    </div>
+  </div>
+</section>
+
+
+
 
       {/* Why Choose Us */}
       <section id="why-choose-us" className="bg-white/[0.03] border-y border-white/5 px-6 py-20 sm:py-28">
